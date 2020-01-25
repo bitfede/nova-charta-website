@@ -1,6 +1,5 @@
 import React from 'react'
 // import fetch from 'isomorphic-unfetch'
-
 import Header from '../components/Header/Header'
 
 class HomePage extends React.Component {
