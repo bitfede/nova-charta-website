@@ -1,5 +1,6 @@
 .headerContainer {
-  background: yellow;
+  background-image: url('/static/img/carta.png');
+  height: 10vh;
 }
 
 .headerTitle {
