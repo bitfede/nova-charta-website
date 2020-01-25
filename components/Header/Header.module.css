@@ -1,8 +1,59 @@
 .headerContainer {
-  background-image: url('/static/img/carta.png');
-  height: 10vh;
+  background-image: url('/img/carta.png');
+  height: 22vh;
+  background-position: 0px -50px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .headerTitle {
   color: red;
+}
+
+.logoNavbar {
+  width: 250px;
+}
+
+.basicNavDropdown {
+  background-color: red;
+}
+
+/* DESKTOP STYLES */
+
+@media (min-width: 481px) {
+  .logoNavbar {
+    width: 350px;
+  }
+}
+
+@media (min-width: 761px) {
+  .logoNavbar {
+    width: 450px;
+  }
+}
+
+@media (min-width: 992px) {
+  .logoNavbar {
+    width: 500px;
+  }
+
+  .headerContainer {
+    height: 27vh;
+  }
+}
+
+.dropdowns {
+  color: blue;
+}
+
+/*  BIGGER SCREENS */
+
+@media (min-width: 2000px) {
+  .logoNavbar {
+    width: 900px;
+  }
+
+  .headerContainer {
+    height: 15vh;
+  }
 }
