@@ -1,6 +1,7 @@
 import React from 'react'
 // import fetch from 'isomorphic-unfetch'
 import Header from '../components/Header/Header'
+import InEvidenza from '../components/InEvidenza/InEvidenza'
 
 class HomePage extends React.Component {
   static async getInitialProps(ctx) {
@@ -13,7 +14,7 @@ class HomePage extends React.Component {
     return (
       <div className="mainContainer">
         <Header />
-        <h1>HELLO WORLD {this.props.test}</h1>
+        <InEvidenza />
       </div>
   )
   }
