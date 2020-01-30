@@ -15,16 +15,32 @@
   margin-left: -15px;
 }
 
+.navLinkContainer {
+  position: relative;
+  z-index: 100;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
 .basicNavDropdown {
   background-color: red;
 }
 
+/* .myDivider {
+  height: 1px;
+  width: 100px;
+  background-color: blue;
+} */
+
 .firstNavLink {
+  border-radius: 10px 10px 0 0;
   padding-right: 2vw !important;
   padding-left: 2vw !important;
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: rgba(132, 20, 20, 0.991);
+  border-bottom: rgba(234, 198, 136, 0.2) solid 0.5px;
 }
 
 .midNavLink {
@@ -33,6 +49,7 @@
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: rgba(132, 20, 20, 0.991);
+  border-bottom: rgba(234, 198, 136, 0.1) solid 1px;
 }
 
 .lastNavLink {
@@ -41,6 +58,7 @@
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: rgba(132, 20, 20, 0.991);
+  border-radius: 0 0 10px 10px;
 }
 
 /* MID SCREENS STYLES */
