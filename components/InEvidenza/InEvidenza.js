@@ -16,7 +16,7 @@ function inEvidenza() {
       <div className={styles.cardsContainer}>
         <div className={styles.cardDiv}>
 
-        <Carousel className="d-lg-none d-xl-none" controls={true} indicators={false}>
+        <Carousel className="d-lg-none d-xl-none" controls={true} indicators={false} interval={3000}>
 
           <Carousel.Item>
             <div className="card" >
