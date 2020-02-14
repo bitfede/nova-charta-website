@@ -16,6 +16,7 @@ class HomePage extends React.Component {
       <div className="mainContainer">
         <Header />
         <InEvidenza />
+        <QuattroSezioni />
       </div>
   )
   }
