@@ -2,6 +2,7 @@ import React from 'react'
 // import fetch from 'isomorphic-unfetch'
 import Header from '../components/Header/Header'
 import InEvidenza from '../components/InEvidenza/InEvidenza'
+import QuattroSezioni from '../components/QuattroSezioni/QuattroSezioni'
 
 class HomePage extends React.Component {
   static async getInitialProps(ctx) {

@@ -11,165 +11,136 @@ function inEvidenza() {
     <div className={styles.inEvidenzaContainer}>
       <div className={styles.titlesContainer}>
         <h1 className={styles.mainTitle}>In evidenza</h1>
-        <div className={styles.titleDecoration} />
       </div>
       <div className={styles.cardsContainer}>
         <div className={styles.cardDiv}>
 
-        <Carousel className="d-lg-none d-xl-none" controls={true} indicators={false} interval={3000}>
-
-          <Carousel.Item>
-            <div className="card" >
-              <div className="row no-gutters">
-                <div className={styles.cardImageContainer + " col-sm-4"} >
-                  <img className={styles.cardImage} src="https://www.novacharta.it/wp-content/uploads/2020/01/RL-98x130.jpg" alt="..." />
-                </div>
-                <div className="col-sm-8">
-                  <div className="card-body">
-                    <h5 className="card-title">Una festa senza fine, Raquel Levy</h5>
-                    <p className="card-text">Dal numero 166 di Charta, Francesco Rapazzini ci accompagna a…</p>
-                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                  <div className="card-body">
-                    <span href="#" className="card-link">45€</span>
-                    <button type="button" className="card-link btn btn-primary">Compra Ora</button>
-                  </div>
-
-
-                </div>
-              </div>
-            </div>
-        </Carousel.Item>
+        <Carousel className="d-lg-none d-xl-none" controls={false} indicators={false} interval={3000}>
 
         <Carousel.Item>
-          <div className="card" >
-            <div className="row no-gutters">
-              <div className={styles.cardImageContainer + " col-sm-4"} >
-                <img className={styles.cardImage} src="https://www.novacharta.it/wp-content/uploads/2020/01/RL-98x130.jpg" alt="..." />
-              </div>
-              <div className="col-sm-8">
-                <div className="card-body">
-                  <h5 className="card-title">Una festa senza fine, Raquel Levy</h5>
-                  <p className="card-text">Dal numero 166 di Charta, Francesco Rapazzini ci accompagna a…</p>
-                  <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-                <div className="card-body">
-                  <span href="#" className="card-link">50€</span>
-                  <button type="button" className="card-link btn btn-primary">Compra Ora</button>
-                </div>
-
-
+          <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2020/01/RL-600x0.jpg')"}} className={styles.cardContainer}>
+            <div className={`${styles.shadedHalf} ${styles.shadedHalfMobile}`}>
+              <h3 className={styles.cardTitle}><a href="#">Abbonamento Alumina Italia</a></h3>
+              <p className={styles.cardDescription}>Alumina è la rivista trimestrale dedicata al mondo della miniatura, dei codici...</p>
+              <div className={styles.ctaPriceDiv}>
+                <span>$0.00</span> <Button variant="success" size="sm">Acquista</Button>
               </div>
             </div>
           </div>
-      </Carousel.Item>
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2016/01/AbbonamentoAlumina_IT_DEF.jpg')"}} className={styles.cardContainer}>
+            <div className={`${styles.shadedHalf} ${styles.shadedHalfMobile}`}>
+              <h3 className={styles.cardTitle}><a href="#">Una festa senza fine, Raquel Levy</a></h3>
+              <p className={styles.cardDescription}>Dal numero 166 di Charta, Francesco Rapazzini ci accompagna a scoprire la storia ...</p>
+              <div className={styles.ctaPriceDiv}>
+                <span>$100</span> <Button variant="success" size="sm">Acquista</Button>
+              </div>
+            </div>
+          </div>
+        </Carousel.Item>
+
+        <Carousel.Item>
+          <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2016/01/alumina-e-charta-copia-600x0.jpg')"}} className={styles.cardContainer}>
+            <div className={`${styles.shadedHalf} ${styles.shadedHalfMobile}`}>
+              <h3 className={styles.cardTitle}><a href="#">Abbonamento Charta + -Abbonamento Alumina</a></h3>
+              <p className={styles.cardDescription}>Scopri di piu</p>
+              <div className={styles.ctaPriceDiv}>
+                <span>$100.00</span> <Button variant="success" size="sm">Acquista</Button>
+              </div>
+            </div>
+          </div>
+        </Carousel.Item>
+
 
         </Carousel>
 
-        <Carousel className="d-none d-lg-block d-xl-block" controls={false} indicators={false} interval={3000}>
+        {/* DESKTOP CAROUSEL */}
+        <Carousel className="d-none d-lg-block d-xl-block" controls={true} indicators={false} interval={3000}>
 
           <Carousel.Item>
+          <div className={styles.carouselWrapperDeskt}>
 
-          <div className={`${styles.cardWrapperDiv} col-sm-6`}>
-            <div className="card" >
-              <div className="row no-gutters">
-                <div className={styles.cardImageContainer + " col-sm-4"} >
-                  <img className={styles.cardImage} src="https://www.novacharta.it/wp-content/uploads/2020/01/RL-98x130.jpg" alt="..." />
-                </div>
-                <div className="col-sm-8">
-                  <div className="card-body">
-                    <h5 className="card-title">Una festa senza fine, Raquel Levy</h5>
-                    <p className="card-text">Dal numero 166 di Charta, Francesco Rapazzini ci accompagna a…</p>
-                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                  <div className="card-body">
-                    <span href="#" className="card-link">45€</span>
-                    <button type="button" className="card-link btn btn-primary">Compra Ora</button>
-                  </div>
-
-
+          <div className={`${styles.cardContainerDesk} col-sm-4`}>
+            <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2020/01/RL-600x0.jpg')"}} className={styles.cardContentDiv1}>
+              <div className={styles.shadedHalf}>
+                <h3 className={styles.cardTitle}><a href="#">Una festa senza fine, Raquel Levy</a></h3>
+                <p className={styles.cardDescription}>Dal numero 166 di Charta, Francesco Rapazzini ci accompagna a...</p>
+                <div className={styles.ctaPriceDiv}>
+                  <span>$100</span> <Button variant="success" size="sm">Acquista</Button>
                 </div>
               </div>
             </div>
           </div>
 
-
-
-          <div className={`${styles.cardWrapperDiv} col-sm-6`}>
-            <div className="card" >
-              <div className="row no-gutters">
-                <div className={styles.cardImageContainer + " col-sm-4"} >
-                  <img className={styles.cardImage} src="https://www.novacharta.it/wp-content/uploads/2020/01/RL-98x130.jpg" alt="..." />
-                </div>
-                <div className="col-sm-8">
-                  <div className="card-body">
-                    <h5 className="card-title">Una festa senza fine, Raquel Levy</h5>
-                    <p className="card-text">Dal numero 166 di Charta, Francesco Rapazzini ci accompagna a…</p>
-                    <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
-                  <div className="card-body">
-                    <span href="#" className="card-link">45€</span>
-                    <button type="button" className="card-link btn btn-primary">Compra Ora</button>
-                  </div>
-
-
+          <div className={`${styles.cardContainerDesk} col-sm-4`}>
+            <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2016/01/AbbonamentoAlumina_IT_DEF.jpg')"}} className={styles.cardContentDiv2}>
+              <div className={styles.shadedHalf}>
+                <h3 className={styles.cardTitle}><a href="#">Abbonamento Alumina Italia</a></h3>
+                <p className={styles.cardDescription}>Alumina è la rivista trimestrale dedicata al mondo della miniatura, dei codici...</p>
+                <div className={styles.ctaPriceDiv}>
+                  <span>$0.00</span> <Button variant="success" size="sm">Acquista</Button>
                 </div>
               </div>
             </div>
           </div>
 
+          <div className={`${styles.cardContainerDesk} col-sm-4`}>
+            <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2016/01/alumina-e-charta-copia-600x0.jpg')"}} className={styles.cardContentDiv3}>
+              <div className={`${styles.shadedHalf} ${styles.shadedHalfRight}`}>
+                <h3 className={styles.cardTitle}><a href="#">Lorem ipsum dolor sit amet</a></h3>
+                <p className={styles.cardDescription}>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                <div className={styles.ctaPriceDiv}>
+                  <span>$100.00</span> <Button variant="success" size="sm">Acquista</Button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div>
         </Carousel.Item>
 
         <Carousel.Item>
+        <div className={styles.carouselWrapperDeskt}>
 
-        <div className={`${styles.cardWrapperDiv} col-sm-6`}>
-          <div className="card" >
-            <div className="row no-gutters">
-              <div className={styles.cardImageContainer + " col-sm-4"} >
-                <img className={styles.cardImage} src="https://www.novacharta.it/wp-content/uploads/2020/01/RL-98x130.jpg" alt="..." />
-              </div>
-              <div className="col-sm-8">
-                <div className="card-body">
-                  <h5 className="card-title">Una festa senza fine, Raquel Levy</h5>
-                  <p className="card-text">Dal numero 166 di Charta, Francesco Rapazzini ci accompagna a…</p>
-                  <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-                <div className="card-body">
-                  <span href="#" className="card-link">45€</span>
-                  <button type="button" className="card-link btn btn-primary">Compra Ora</button>
-                </div>
-
-
+        <div className={`${styles.cardContainerDesk} col-sm-4`}>
+          <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2020/01/RL-600x0.jpg')"}} className={styles.cardContentDiv1}>
+            <div className={styles.shadedHalf}>
+              <h3 className={styles.cardTitle}><a href="#">Una festa senza fine, Raquel Levy</a></h3>
+              <p className={styles.cardDescription}>Dal numero 166 di Charta, Francesco Rapazzini ci accompagna a...</p>
+              <div className={styles.ctaPriceDiv}>
+                <span>$100</span> <Button variant="success" size="sm">Acquista</Button>
               </div>
             </div>
           </div>
         </div>
 
-
-
-        <div className={`${styles.cardWrapperDiv} col-sm-6`}>
-          <div className="card" >
-            <div className="row no-gutters">
-              <div className={styles.cardImageContainer + " col-sm-4"} >
-                <img className={styles.cardImage} src="https://www.novacharta.it/wp-content/uploads/2020/01/RL-98x130.jpg" alt="..." />
-              </div>
-              <div className="col-sm-8">
-                <div className="card-body">
-                  <h5 className="card-title">Una festa senza fine, Raquel Levy</h5>
-                  <p className="card-text">Dal numero 166 di Charta, Francesco Rapazzini ci accompagna a…</p>
-                  <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-                <div className="card-body">
-                  <span href="#" className="card-link">45€</span>
-                  <button type="button" className="card-link btn btn-primary">Compra Ora</button>
-                </div>
-
-
+        <div className={`${styles.cardContainerDesk} col-sm-4`}>
+          <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2016/01/AbbonamentoAlumina_IT_DEF.jpg')"}} className={styles.cardContentDiv2}>
+            <div className={styles.shadedHalf}>
+              <h3 className={styles.cardTitle}><a href="#">Abbonamento Alumina Italia</a></h3>
+              <p className={styles.cardDescription}>Alumina è la rivista trimestrale dedicata al mondo della miniatura, dei codici...</p>
+              <div className={styles.ctaPriceDiv}>
+                <span>$0.00</span> <Button variant="success" size="sm">Acquista</Button>
               </div>
             </div>
           </div>
         </div>
 
+        <div className={`${styles.cardContainerDesk} col-sm-4`}>
+          <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2016/01/alumina-e-charta-copia-600x0.jpg')"}} className={styles.cardContentDiv3}>
+            <div className={`${styles.shadedHalf} ${styles.shadedHalfRight}`}>
+              <h3 className={styles.cardTitle}><a href="#">Lorem ipsum dolor sit amet</a></h3>
+              <p className={styles.cardDescription}>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+              <div className={styles.ctaPriceDiv}>
+                <span>$100.00</span> <Button variant="success" size="sm">Acquista</Button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
       </Carousel.Item>
 
 

@@ -42,5 +42,46 @@ body {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: white;
+  color: black;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: blue;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: grey;
+}
+
+/* CAROUSEL IN EVIDENZA COMPONENT */
+
+.carousel-control-next, .carousel-control-prev {
+  width: 2%;
+  background-color: #dae0e5;
+}
+
+/* -- desktop normal screens */
+
+@media (min-width: 992px) {
+  .carousel-control-next, .carousel-control-prev {
+    width: 34px;
+    height: 34px;
+    margin-top: 6.5rem;
+    background-color: black;
+    border-radius: 50px;
+  }
+}
+
+/* -- desktop x-large screens */
+
+@media (min-width: 1250px) {
+  .carousel-control-next, .carousel-control-prev {
+    margin-top: 6rem;
+  }
+}
+
+@media (min-width: 1250px) {
+  .carousel-control-next, .carousel-control-prev {
+    margin-top: 5rem;
+  }
 }
