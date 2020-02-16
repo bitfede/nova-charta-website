@@ -9,7 +9,14 @@ function RaccolteFondi() {
 
   return (
     <div className={styles.raccolteFondiContainer}>
-      <h1>asd</h1>
+      <h1 className={styles.mainTitle}>Raccolte fondi</h1>
+      <Row>
+        <Col sm="12">
+          <div className={styles.raccolteCardContent}>
+
+          </div>
+        </Col>
+      </Row>
     </div>
   )
 }
