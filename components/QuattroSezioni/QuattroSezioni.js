@@ -4,7 +4,7 @@ import { Container, Row, Col  } from 'react-bootstrap'
 function QuattroSezioni() {
 
   const generateCards = () => {
-    console.log('helloworld2');
+    console.log('Quattro Sezioni - Component');
   }
 
   return (

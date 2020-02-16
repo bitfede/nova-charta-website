@@ -4,7 +4,7 @@ import { Container, Row, Col  } from 'react-bootstrap'
 function RaccolteFondi() {
 
   const generateCards = () => {
-    console.log('helloworld2');
+    console.log('Raccolta Fondi - Component');
   }
 
   return (
@@ -13,7 +13,7 @@ function RaccolteFondi() {
       <Row>
         <Col sm="12">
           <div className={styles.raccolteCardContent}>
-            
+
           </div>
         </Col>
       </Row>

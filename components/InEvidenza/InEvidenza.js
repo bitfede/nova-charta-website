@@ -4,7 +4,7 @@ import { Carousel, Card, Button  } from 'react-bootstrap'
 function inEvidenza() {
 
   const generateCards = () => {
-    console.log('helloworld2');
+    console.log('In Evidenza - Component');
   }
 
   return (
