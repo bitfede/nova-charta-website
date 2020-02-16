@@ -13,7 +13,7 @@ function RaccolteFondi() {
       <Row>
         <Col sm="12">
           <div className={styles.raccolteCardContent}>
-
+            
           </div>
         </Col>
       </Row>
