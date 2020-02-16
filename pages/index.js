@@ -4,6 +4,7 @@ import Header from '../components/Header/Header'
 import InEvidenza from '../components/InEvidenza/InEvidenza'
 import QuattroSezioni from '../components/QuattroSezioni/QuattroSezioni'
 import RaccolteFondi from '../components/RaccolteFondi/RaccolteFondi'
+import StoriaCasa from '../components/StoriaCasa/StoriaCasa'
 
 class HomePage extends React.Component {
   static async getInitialProps(ctx) {
@@ -19,6 +20,7 @@ class HomePage extends React.Component {
         <InEvidenza />
         <QuattroSezioni />
         <RaccolteFondi />
+        <StoriaCasa />
       </div>
   )
   }
