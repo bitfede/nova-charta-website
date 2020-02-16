@@ -54,7 +54,7 @@ body {
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: blue;
+  color: black;
 }
 
 .navbar-dark .navbar-nav .nav-link.active {
@@ -63,33 +63,19 @@ body {
 
 /* CAROUSEL IN EVIDENZA COMPONENT */
 
-.carousel-control-next, .carousel-control-prev {
-  width: 2%;
-  background-color: #dae0e5;
+.carousel-indicators {
+  bottom: -57px;
+}
+
+.carousel-indicators li {
+  background: darkslategrey;
+  height: 5px;
+  width: 30px;
+  border: 0;
 }
 
 /* -- desktop normal screens */
 
 @media (min-width: 992px) {
-  .carousel-control-next, .carousel-control-prev {
-    width: 34px;
-    height: 34px;
-    margin-top: 6.5rem;
-    background-color: black;
-    border-radius: 50px;
-  }
-}
 
-/* -- desktop x-large screens */
-
-@media (min-width: 1250px) {
-  .carousel-control-next, .carousel-control-prev {
-    margin-top: 6rem;
-  }
-}
-
-@media (min-width: 1250px) {
-  .carousel-control-next, .carousel-control-prev {
-    margin-top: 5rem;
-  }
 }

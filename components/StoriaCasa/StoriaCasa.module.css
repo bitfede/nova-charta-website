@@ -18,7 +18,8 @@
 }
 
 .storiaImage {
-
+  padding-top: 10px;
+  border-radius: 20px;
 }
 
 
@@ -37,5 +38,9 @@
   .mainTitle {
     font-size: 2.5rem;
     font-weight: bold;
+  }
+
+  .storiaImage {
+    border-radius: 0 20px 20px 0;
   }
 }

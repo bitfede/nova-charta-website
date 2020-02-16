@@ -15,7 +15,7 @@ function inEvidenza() {
       <div className={styles.cardsContainer}>
         <div className={styles.cardDiv}>
 
-        <Carousel className="d-lg-none d-xl-none" controls={false} indicators={false} interval={3000}>
+        <Carousel className="d-lg-none d-xl-none" controls={false} indicators={true} interval={3000}>
 
         <Carousel.Item>
           <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2020/01/RL-600x0.jpg')"}} className={styles.cardContainer}>
@@ -57,7 +57,7 @@ function inEvidenza() {
         </Carousel>
 
         {/* DESKTOP CAROUSEL */}
-        <Carousel className="d-none d-lg-block d-xl-block" controls={true} indicators={false} interval={3000}>
+        <Carousel className="d-none d-lg-block d-xl-block" controls={false} indicators={true} interval={3000}>
 
           <Carousel.Item>
           <div className={styles.carouselWrapperDeskt}>

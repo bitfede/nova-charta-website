@@ -4,10 +4,10 @@
   margin-top: -5vh;
   margin-left: 0vw;
   margin-right: 0vw;
-  height: 670px;
+  /* height: 670px; */
   background-size: cover;
   padding-top: 160px;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
 }
 
 .rowDiv {
@@ -48,8 +48,12 @@
 @media (min-width: 992px) {
 
   .footerContainer {
-    height: 400px;
+    /* height: 480px; */
     padding-top: 90px;
+  }
+
+  .footerContentContainer p {
+
   }
 
   .socialIconsContainer {
@@ -65,4 +69,37 @@
     margin-right: 15px;
   }
 
+}
+
+/* ANIMATIONS */
+
+/* Pop */
+@-webkit-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+@keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+.hvrPop {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvrPop:hover, .hvr-pop:focus, .hvr-pop:active {
+  -webkit-animation-name: hvr-pop;
+  animation-name: hvr-pop;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }
