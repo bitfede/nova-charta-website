@@ -46,9 +46,11 @@
   }
   .desktopCard1 {
     border-radius: 50px 0 0 0;
+    background-position: top;
   }
   .desktopCard2 {
     border-radius: 0 50px 0 0;
+    background-position: top;
   }
   .desktopCard3 {
     border-radius: 0 0 0 50px;

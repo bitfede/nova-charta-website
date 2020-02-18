@@ -12,7 +12,7 @@ function QuattroSezioni() {
       <Row>
         <Col xs="12" lg="6">
           <a className={`${styles.cardLinkElem} ${styles.hvrShrink}`} href="#">
-            <div style={{backgroundImage: "url('img/novacharta-riviste.jpg')"}} className={`${styles.cardContainer} ${styles.desktopCard1}`}>
+            <div style={{backgroundImage: "url('img/novacharta-riviste2.png')"}} className={`${styles.cardContainer} ${styles.desktopCard1}`}>
               <div className={styles.shadedArea}>
                 <h2 className={styles.cardTitle}>Riviste</h2>
               </div>
@@ -21,7 +21,7 @@ function QuattroSezioni() {
         </Col>
         <Col xs="12" lg="6">
           <a className={`${styles.cardLinkElem} ${styles.hvrShrink}`} href="#">
-            <div style={{backgroundImage: "url('img/novacharta-libri.png')"}} className={`${styles.cardContainer} ${styles.desktopCard2}`}>
+            <div style={{backgroundImage: "url('img/novacharta-libri.jpeg')"}} className={`${styles.cardContainer} ${styles.desktopCard2}`}>
               <div className={styles.shadedArea}>
                 <h2 className={styles.cardTitle}>Libri</h2>
               </div>
@@ -39,7 +39,7 @@ function QuattroSezioni() {
         </Col>
         <Col xs="12" lg="6">
           <a className={`${styles.cardLinkElem} ${styles.hvrShrink}`} href="#">
-            <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2018/02/Nova-Charta-%E2%80%94-Gruppo-di-codici-34-1024x681.jpg')"}} className={`${styles.cardContainer} ${styles.desktopCard4}`}>
+            <div style={{backgroundImage: "url('img/novacharta-cattedre.jpeg')"}} className={`${styles.cardContainer} ${styles.desktopCard4}`}>
               <div className={`${styles.shadedArea} ${styles.desktopCard4}`}>
                 <h2 className={styles.cardTitle}>Cattedre Ambulanti</h2>
               </div>
