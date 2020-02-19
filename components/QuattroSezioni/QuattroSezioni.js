@@ -32,7 +32,7 @@ function QuattroSezioni() {
           <a className={`${styles.cardLinkElem} ${styles.hvrShrink}`} href="#">
             <div style={{backgroundImage: "url('img/novacharta-codici.jpg')"}} className={`${styles.cardContainer} ${styles.desktopCard3}`}>
               <div className={`${styles.shadedArea} ${styles.desktopCard3}`}>
-                <h2 className={styles.cardTitle}>Salviamo un codice</h2>
+                <h2 className={styles.cardTitle}>Salviamo un Codice</h2>
               </div>
             </div>
           </a>
