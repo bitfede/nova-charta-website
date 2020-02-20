@@ -11,7 +11,7 @@ function Header() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className={styles.navLinkContainer}>
-          <Nav.Link className={`${styles.midNavLink}`} href="#chisiamo"><span className={styles.hvrUnderlineFromCenter}>Chi Siamo</span></Nav.Link>
+          <Nav.Link className={`${styles.midNavLink}`} href="#chisiamo"><span className={styles.hvrUnderlineFromCenter}>Catalogo</span></Nav.Link>
           <Nav.Link className={`${styles.midNavLink}`} href="#librerie"><span className={styles.hvrUnderlineFromCenter}>Librerie</span></Nav.Link>
           <Nav.Link className={`${styles.midNavLink}`} href="#corsi"><span className={styles.hvrUnderlineFromCenter}>I nostri Corsi</span></Nav.Link>
           <Nav.Link className={`${styles.midNavLink}`} href="#diario"><span className={styles.hvrUnderlineFromCenter}>Diario</span></Nav.Link>
