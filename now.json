@@ -3,5 +3,10 @@
   "version": 2,
   "env": {
     "WOOCOMMERCE_SECRET_KEY": "@novacharta-woocommerce-secret-key"
+  },
+  "build": {
+    "env": {
+      "WOOCOMMERCE_SECRET_KEY": "@novacharta-woocommerce-secret-key"
+    }
   }
 }
