@@ -1,5 +1,7 @@
+require('dotenv').config()
+
 module.exports = {
   env: {
-    APISecret: process.env.WOOCOMMERCE_SECRET_KEY || 'error'
+    WOOCOMMERCE_SECRET_KEY: process.env.WOOCOMMERCE_SECRET_KEY || 'error'
   }
 }

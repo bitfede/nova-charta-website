@@ -1,7 +1,8 @@
 import styles from './InEvidenza.module.css';
 import { Carousel, Card, Button  } from 'react-bootstrap'
 
-function inEvidenza() {
+function inEvidenza(props) {
+  console.log("PROPS - IN EVIDENZA:", props);
 
   const generateCards = () => {
     console.log('In Evidenza - Component');
