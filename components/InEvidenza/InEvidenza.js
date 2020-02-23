@@ -4,9 +4,152 @@ import { Carousel, Card, Button  } from 'react-bootstrap'
 function inEvidenza(props) {
   console.log("PROPS - IN EVIDENZA:", props);
 
-  const generateCards = () => {
-    console.log('In Evidenza - Component');
+  //UTILITY FX for desktop generation of card row
+  const placeCardRow = (cardsData) => {
+    console.log(cardsData, "ASD");
+    let theCardsRowLeft, theCardsRowCenter, theCardsRowRight;
+    const totalContentLen = 165;
+    let titleLen = cardsData.left.name.length;
+    let paragraphLen = cardsData.left.short_description.length;
+    let paraAllowedLen = totalContentLen - titleLen
+    console.log(paraAllowedLen);
+    let short_description_cut = cardsData.left.short_description.substring(0, paraAllowedLen);
+    if (short_description_cut < cardsData.left.short_description) {
+      short_description_cut = short_description_cut + '...'
+    }
+    theCardsRowLeft = (
+      <div className={`${styles.cardContainerDesk} col-sm-4`}>
+        <div style={{backgroundImage: `url('${cardsData.left.images[0].src}')`}} className={styles.cardContentDiv1}>
+          <div className={styles.shadedHalf}>
+            <h3 className={styles.cardTitle}><a href="#">{cardsData.left.name}</a></h3>
+            <div className={styles.cardDescription} dangerouslySetInnerHTML={{__html: short_description_cut}}></div>
+            <div className={styles.ctaPriceDiv}>
+              <span>€{cardsData.left.price}</span> <Button variant="success" size="sm">Acquista</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+
+    if (cardsData.center) {
+      titleLen = cardsData.center.name.length;
+      paragraphLen = cardsData.center.short_description.length;
+      paraAllowedLen = totalContentLen - titleLen
+      console.log(paraAllowedLen);
+      short_description_cut = cardsData.center.short_description.substring(0, paraAllowedLen);
+      if (short_description_cut < cardsData.center.short_description) {
+        short_description_cut = short_description_cut + '...'
+      }
+      theCardsRowCenter = (
+        <div className={`${styles.cardContainerDesk} col-sm-4`}>
+          <div style={{backgroundImage: `url('${cardsData.center.images[0].src}')`}} className={styles.cardContentDiv2}>
+            <div className={styles.shadedHalf}>
+              <h3 className={styles.cardTitle}><a href="#">{cardsData.center.name}</a></h3>
+                <div className={styles.cardDescription} dangerouslySetInnerHTML={{__html: short_description_cut}}></div>
+              <div className={styles.ctaPriceDiv}>
+                <span>€{cardsData.center.price}</span> <Button variant="success" size="sm">Acquista</Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    if (cardsData.right) {
+      titleLen = cardsData.right.name.length;
+      paragraphLen = cardsData.right.short_description.length;
+      paraAllowedLen = totalContentLen - titleLen
+      console.log(paraAllowedLen);
+      short_description_cut = cardsData.right.short_description.substring(0, paraAllowedLen);
+      if (short_description_cut < cardsData.right.short_description) {
+        short_description_cut = short_description_cut + '...'
+      }
+      theCardsRowRight = (
+        <div className={`${styles.cardContainerDesk} col-sm-4`}>
+          <div style={{backgroundImage: `url('${cardsData.right.images[0].src}')`}} className={styles.cardContentDiv3}>
+            <div className={`${styles.shadedHalf} ${styles.shadedHalfRight}`}>
+              <h3 className={styles.cardTitle}><a href="#">{cardsData.center.name}</a></h3>
+              <div className={styles.cardDescription} dangerouslySetInnerHTML={{__html: short_description_cut}}></div>
+              <div className={styles.ctaPriceDiv}>
+                <span>€{cardsData.right.price}</span> <Button variant="success" size="sm">Acquista</Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    return [theCardsRowLeft, theCardsRowCenter, theCardsRowRight]
   }
+
+  // DESKTOP CARDS GENERATION
+  const generateCardsDesktop = () => {
+    const rawData = props.data
+    let organizedData = []
+    let triad = {}
+    let counter = 0;
+    for (let i = 0; i < rawData.length; i++) {
+      if (counter === 0) {
+        triad.left = rawData[i];
+      } else if (counter === 1) {
+        triad.center = rawData[i]
+      } else if (counter === 2) {
+        triad.right = rawData[i]
+      } else {
+        counter = 0;
+        organizedData.push(triad)
+        triad = {}
+        triad.left = rawData[i]
+      }
+      if (i === rawData.length - 1) {
+        organizedData.push(triad)
+        triad = {}
+      }
+      counter++;
+    }
+
+    console.log("<datafinal> ", organizedData);
+
+    let generatedCards = organizedData.map( (element, index) => {
+      return (
+        <Carousel.Item key={`desktop-card-${index}`}>
+          <div className={styles.carouselWrapperDeskt}>
+            {placeCardRow(element)}
+          </div>
+        </Carousel.Item>
+      )
+    })
+
+    return generatedCards
+  }
+
+  // MOBILE CARDS GENERATION
+  const generateCardsMobile = () => {
+    let generatedCards = props.data.map( (element, index) => {
+      const totalContentLen = 170;
+      let titleLen = element.name.length;
+      let paragraphLen = element.short_description.length;
+      let paraAllowedLen = totalContentLen - titleLen
+      let short_description_cut = element.short_description.substring(0, paraAllowedLen);
+      if (short_description_cut < element.short_description) {
+        short_description_cut = short_description_cut + '...'
+      }
+      return (
+        <Carousel.Item key={`inevid-${index}`}>
+          <div style={{backgroundImage: `url('${element.images[0].src}')`}} className={styles.cardContainer}>
+            <div className={`${styles.shadedHalf} ${styles.shadedHalfMobile}`}>
+              <h3 className={styles.cardTitle}><a href="#">{element.name}</a></h3>
+              <div className={styles.cardDescription} dangerouslySetInnerHTML={{__html: short_description_cut}}></div>
+              <div className={styles.ctaPriceDiv}>
+                <span>€{element.price}</span> <Button variant="success" size="sm">Acquista</Button>
+              </div>
+            </div>
+          </div>
+        </Carousel.Item>
+      )
+    })
+    return generatedCards
+    }
 
   return (
     <div className={styles.inEvidenzaContainer}>
@@ -16,134 +159,17 @@ function inEvidenza(props) {
       <div className={styles.cardsContainer}>
         <div className={styles.cardDiv}>
 
+        {/* MOBILE CAROUSEL */}
         <Carousel className="d-lg-none d-xl-none" controls={false} indicators={true} interval={3000}>
 
-        <Carousel.Item>
-          <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2020/01/RL-600x0.jpg')"}} className={styles.cardContainer}>
-            <div className={`${styles.shadedHalf} ${styles.shadedHalfMobile}`}>
-              <h3 className={styles.cardTitle}><a href="#">Abbonamento Alumina Italia</a></h3>
-              <p className={styles.cardDescription}>Alumina è la rivista trimestrale dedicata al mondo della miniatura, dei codici...</p>
-              <div className={styles.ctaPriceDiv}>
-                <span>$0.00</span> <Button variant="success" size="sm">Acquista</Button>
-              </div>
-            </div>
-          </div>
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2016/01/AbbonamentoAlumina_IT_DEF.jpg')"}} className={styles.cardContainer}>
-            <div className={`${styles.shadedHalf} ${styles.shadedHalfMobile}`}>
-              <h3 className={styles.cardTitle}><a href="#">Una festa senza fine, Raquel Levy</a></h3>
-              <p className={styles.cardDescription}>Dal numero 166 di Charta, Francesco Rapazzini ci accompagna a scoprire la storia ...</p>
-              <div className={styles.ctaPriceDiv}>
-                <span>$100</span> <Button variant="success" size="sm">Acquista</Button>
-              </div>
-            </div>
-          </div>
-        </Carousel.Item>
-
-        <Carousel.Item>
-          <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2016/01/alumina-e-charta-copia-600x0.jpg')"}} className={styles.cardContainer}>
-            <div className={`${styles.shadedHalf} ${styles.shadedHalfMobile}`}>
-              <h3 className={styles.cardTitle}><a href="#">Abbonamento Charta + -Abbonamento Alumina</a></h3>
-              <p className={styles.cardDescription}>Scopri di piu</p>
-              <div className={styles.ctaPriceDiv}>
-                <span>$100.00</span> <Button variant="success" size="sm">Acquista</Button>
-              </div>
-            </div>
-          </div>
-        </Carousel.Item>
-
+        {generateCardsMobile()}
 
         </Carousel>
 
         {/* DESKTOP CAROUSEL */}
         <Carousel className="d-none d-lg-block d-xl-block" controls={false} indicators={true} interval={3000}>
 
-          <Carousel.Item>
-          <div className={styles.carouselWrapperDeskt}>
-
-          <div className={`${styles.cardContainerDesk} col-sm-4`}>
-            <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2020/01/RL-600x0.jpg')"}} className={styles.cardContentDiv1}>
-              <div className={styles.shadedHalf}>
-                <h3 className={styles.cardTitle}><a href="#">Una festa senza fine, Raquel Levy</a></h3>
-                <p className={styles.cardDescription}>Dal numero 166 di Charta, Francesco Rapazzini ci accompagna a...</p>
-                <div className={styles.ctaPriceDiv}>
-                  <span>$100</span> <Button variant="success" size="sm">Acquista</Button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className={`${styles.cardContainerDesk} col-sm-4`}>
-            <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2016/01/AbbonamentoAlumina_IT_DEF.jpg')"}} className={styles.cardContentDiv2}>
-              <div className={styles.shadedHalf}>
-                <h3 className={styles.cardTitle}><a href="#">Abbonamento Alumina Italia</a></h3>
-                <p className={styles.cardDescription}>Alumina è la rivista trimestrale dedicata al mondo della miniatura, dei codici...</p>
-                <div className={styles.ctaPriceDiv}>
-                  <span>$0.00</span> <Button variant="success" size="sm">Acquista</Button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className={`${styles.cardContainerDesk} col-sm-4`}>
-            <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2016/01/alumina-e-charta-copia-600x0.jpg')"}} className={styles.cardContentDiv3}>
-              <div className={`${styles.shadedHalf} ${styles.shadedHalfRight}`}>
-                <h3 className={styles.cardTitle}><a href="#">Lorem ipsum dolor sit amet</a></h3>
-                <p className={styles.cardDescription}>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-                <div className={styles.ctaPriceDiv}>
-                  <span>$100.00</span> <Button variant="success" size="sm">Acquista</Button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          </div>
-        </Carousel.Item>
-
-        <Carousel.Item>
-        <div className={styles.carouselWrapperDeskt}>
-
-        <div className={`${styles.cardContainerDesk} col-sm-4`}>
-          <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2020/01/RL-600x0.jpg')"}} className={styles.cardContentDiv1}>
-            <div className={styles.shadedHalf}>
-              <h3 className={styles.cardTitle}><a href="#">Una festa senza fine, Raquel Levy</a></h3>
-              <p className={styles.cardDescription}>Dal numero 166 di Charta, Francesco Rapazzini ci accompagna a...</p>
-              <div className={styles.ctaPriceDiv}>
-                <span>$100</span> <Button variant="success" size="sm">Acquista</Button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className={`${styles.cardContainerDesk} col-sm-4`}>
-          <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2016/01/AbbonamentoAlumina_IT_DEF.jpg')"}} className={styles.cardContentDiv2}>
-            <div className={styles.shadedHalf}>
-              <h3 className={styles.cardTitle}><a href="#">Abbonamento Alumina Italia</a></h3>
-              <p className={styles.cardDescription}>Alumina è la rivista trimestrale dedicata al mondo della miniatura, dei codici...</p>
-              <div className={styles.ctaPriceDiv}>
-                <span>$0.00</span> <Button variant="success" size="sm">Acquista</Button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className={`${styles.cardContainerDesk} col-sm-4`}>
-          <div style={{backgroundImage: "url('https://www.novacharta.it/wp-content/uploads/2016/01/alumina-e-charta-copia-600x0.jpg')"}} className={styles.cardContentDiv3}>
-            <div className={`${styles.shadedHalf} ${styles.shadedHalfRight}`}>
-              <h3 className={styles.cardTitle}><a href="#">Lorem ipsum dolor sit amet</a></h3>
-              <p className={styles.cardDescription}>consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
-              <div className={styles.ctaPriceDiv}>
-                <span>$100.00</span> <Button variant="success" size="sm">Acquista</Button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        </div>
-      </Carousel.Item>
-
+          {generateCardsDesktop()}
 
         </Carousel>
 
