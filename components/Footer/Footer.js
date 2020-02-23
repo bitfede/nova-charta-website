@@ -31,7 +31,7 @@ function Footer() {
                 <Button variant="primary" type="submit">Iscriviti</Button>
                 </div>
                 <Form.Text className="text-muted">
-                  La tua privacy verrà rispettata
+                  I dati saranno trattati seguendo il GDPR
                 </Form.Text>
               </Form.Group>
             </Form>
