@@ -5,13 +5,13 @@ function Header() {
   return (
     <div className={styles.headerContainer}>
     <Navbar className={styles.navBarElemCont} variant="dark" bg="bg-red" expand="lg">
-      <Navbar.Brand href="#home">
+      <Navbar.Brand href="/">
         <img className={styles.logoNavbar} src="/img/novacharta-logo.svg" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className={styles.navLinkContainer}>
-          <Nav.Link className={`${styles.midNavLink}`} href="#chisiamo"><span className={styles.hvrUnderlineFromCenter}>Catalogo</span></Nav.Link>
+          <Nav.Link className={`${styles.midNavLink}`} href="catalogo"><span className={styles.hvrUnderlineFromCenter}>Catalogo</span></Nav.Link>
           <Nav.Link className={`${styles.midNavLink}`} href="#librerie"><span className={styles.hvrUnderlineFromCenter}>Librerie</span></Nav.Link>
           <Nav.Link className={`${styles.midNavLink}`} href="#corsi"><span className={styles.hvrUnderlineFromCenter}>I nostri Corsi</span></Nav.Link>
           <Nav.Link className={`${styles.midNavLink}`} href="#diario"><span className={styles.hvrUnderlineFromCenter}>Diario</span></Nav.Link>
