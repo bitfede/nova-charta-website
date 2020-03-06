@@ -3,8 +3,6 @@ import { Container, Row, Col, Image, Form, Button  } from 'react-bootstrap'
 
 function Librerie(props) {
 
-  console.log("<><><><><>", props.contenutoPagina.content.rendered);
-
   return (
     <div className={styles.librerieContainer}>
       <h1>Librerie Affiliate</h1>
