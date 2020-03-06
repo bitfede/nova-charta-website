@@ -5,6 +5,11 @@
   margin-right: 5vw;
 }
 
+.librerieContainer h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+}
+
 @media (min-width: 992px) {
 
   .librerieContainer {
