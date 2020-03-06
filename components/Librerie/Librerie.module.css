@@ -1,0 +1,15 @@
+.librerieContainer {
+  z-index: 0;
+  margin-top: 3vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+@media (min-width: 992px) {
+
+  .librerieContainer {
+    margin-top: 12vh;
+    margin-left: 4vw;
+    margin-right: 4vw;
+  }
+}

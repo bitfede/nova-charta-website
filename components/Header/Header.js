@@ -12,7 +12,7 @@ function Header() {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className={styles.navLinkContainer}>
           <Nav.Link className={`${styles.midNavLink}`} href="catalogo"><span className={styles.hvrUnderlineFromCenter}>Catalogo</span></Nav.Link>
-          <Nav.Link className={`${styles.midNavLink}`} href="#librerie"><span className={styles.hvrUnderlineFromCenter}>Librerie</span></Nav.Link>
+          <Nav.Link className={`${styles.midNavLink}`} href="librerie#librerie"><span className={styles.hvrUnderlineFromCenter}>Librerie</span></Nav.Link>
           <Nav.Link className={`${styles.midNavLink}`} href="#corsi"><span className={styles.hvrUnderlineFromCenter}>I nostri Corsi</span></Nav.Link>
           <Nav.Link className={`${styles.midNavLink}`} href="#diario"><span className={styles.hvrUnderlineFromCenter}>Diario</span></Nav.Link>
           <Nav.Link className={`${styles.midNavLink}`} href="#venditaing"><span className={styles.hvrUnderlineFromCenter}>Vendita Ingombri</span></Nav.Link>
