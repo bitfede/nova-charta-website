@@ -10,6 +10,9 @@
   font-weight: bold;
 }
 
+
+/* DESKTOP STYzlE */
+
 @media (min-width: 992px) {
 
   .librerieContainer {

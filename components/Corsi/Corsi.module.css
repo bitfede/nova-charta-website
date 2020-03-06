@@ -1,0 +1,32 @@
+.corsiContainer {
+  z-index: 0;
+  margin-top: 10vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.mainTitle {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  margin-bottom: 30px !important;
+}
+
+.ctaBtn {
+  background: yellow !important;
+}
+
+
+/* DESKTOP STYLES */
+
+@media (min-width: 992px) {
+  .catalogElemTitle {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    margin-top: 0;
+  }
+}
+
+
+https://www.novacharta.it/prodotto/corso-il-libro-del-novecento-padova-1-2-3-novembre-2019/
+
+Iscriviti al corso

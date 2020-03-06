@@ -1,10 +1,10 @@
 import React from 'react'
 import fetch from 'isomorphic-unfetch'
 import Header from '../components/Header/Header'
-import LibrerieAff from '../components/Librerie/Librerie'
+import CorsiContent from '../components/Corsi/Corsi'
 import Footer from '../components/Footer/Footer'
 
-class Librerie extends React.Component {
+class Corsi extends React.Component {
 
   static async getInitialProps(ctx) {
     // Gets librerie page content from Wordpress backend
@@ -12,7 +12,7 @@ class Librerie extends React.Component {
     const wooKey = process.env.WOOCOMMERCE_SECRET_KEY
     // console.log("DEBUG [] [] -> ", process.env.WOOCOMMERCE_SECRET_KEY);
     const wooApiUrl = `https://${wooUser}:${wooKey}@novacharta.it/wp-json/wp/v2`
-    const res = await fetch(`${wooApiUrl}/pages/3324`)
+    const res = await fetch(`${wooApiUrl}/pages/3351`)
     const json = await res.json()
     return { contenutoPagina: json }
   }
@@ -23,11 +23,11 @@ class Librerie extends React.Component {
     return (
       <div className="mainContainer">
         <Header />
-        <h1 style={{marginTop: 100}}>Pagina in costruzione</h1>
+        <CorsiContent contenutoPagina={contenutoPagina} />
         <Footer />
       </div>
   )
   }
 }
 
-export default Librerie
+export default Corsi
