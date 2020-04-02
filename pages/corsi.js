@@ -26,7 +26,7 @@ class Corsi extends React.Component {
         <CorsiContent contenutoPagina={contenutoPagina} />
         <Footer />
       </div>
-  )
+    )
   }
 }
 
