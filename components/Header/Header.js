@@ -15,7 +15,7 @@ function Header() {
           <Nav.Link className={`${styles.midNavLink}`} href="/librerie#librerie"><span className={styles.hvrUnderlineFromCenter}>Librerie</span></Nav.Link>
           <Nav.Link className={`${styles.midNavLink}`} href="/corsi#corsi"><span className={styles.hvrUnderlineFromCenter}>I nostri Corsi</span></Nav.Link>
           <Nav.Link className={`${styles.midNavLink}`} href="#venditaing"><span className={styles.hvrUnderlineFromCenter}>Pubblicità</span></Nav.Link>
-          <Nav.Link className={`${styles.midNavLink}`} href="#raccoltafondo"><span className={styles.hvrUnderlineFromCenter}>Raccolta Fondi</span></Nav.Link>
+          <Nav.Link className={`${styles.midNavLink}`} href="/raccolta-fondi"><span className={styles.hvrUnderlineFromCenter}>Raccolta Fondi</span></Nav.Link>
           <Nav.Link className={`${styles.lastNavLink} `} href="/contatti#contatti"><span className={styles.hvrUnderlineFromCenter}>Contatti</span></Nav.Link>
           {/* <NavDropdown className={styles.midNavLink} title="Dropdown" id="basic-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
