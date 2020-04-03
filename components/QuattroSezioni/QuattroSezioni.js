@@ -29,7 +29,7 @@ function QuattroSezioni() {
           </a>
         </Col>
         <Col xs="12" lg="6">
-          <a className={`${styles.cardLinkElem} ${styles.hvrShrink}`} href="#">
+          <a className={`${styles.cardLinkElem} ${styles.hvrShrink}`} href="/salviamo-un-codice">
             <div style={{backgroundImage: "url('img/novacharta-codici.jpg')"}} className={`${styles.cardContainer} ${styles.desktopCard3}`}>
               <div className={`${styles.shadedArea} ${styles.desktopCard3}`}>
                 <h2 className={styles.cardTitle}>Salviamo un Codice</h2>
