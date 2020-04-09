@@ -12,10 +12,11 @@ class HomePage extends React.Component {
     // Gets InEvidenza products from WooCommerce backend
     const wooUser = "ck_b16c75b78dd550537bb2b1f0645d08f5b0bd4067"
     const wooKey = process.env.WOOCOMMERCE_SECRET_KEY
-    console.log("DEBUG [] [] -> ", process.env.WOOCOMMERCE_SECRET_KEY);
+    // console.log("DEBUG [] [] -> ", process.env.WOOCOMMERCE_SECRET_KEY);
     const wooApiUrl = `https://${wooUser}:${wooKey}@novacharta.it/wp-json/wc/v3`
-    const res = await fetch(`${wooApiUrl}/products?category=90`)
+    const res = await fetch(`${wooApiUrl}/products?category=83`) // OR 90 for "ilmeglio" category
     const json = await res.json()
+    //TODO add the shop url 'negozio.novacharta.it' as a global prop?
     return { inEvidenza: json }
   }
 

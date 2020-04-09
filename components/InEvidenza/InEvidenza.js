@@ -21,10 +21,10 @@ function inEvidenza(props) {
       <div key={`inevid-left`} className={`${styles.cardContainerDesk} col-sm-4`}>
         <div style={{backgroundImage: `url('${cardsData.left.images[0].src}')`}} className={styles.cardContentDiv1}>
           <div className={styles.shadedHalf}>
-            <h3 className={styles.cardTitle}><a target="_blank" href={cardsData.permalink}>{cardsData.left.name}</a></h3>
+            <h3 className={styles.cardTitle}><a target="_blank" href={cardsData.left.permalink}>{cardsData.left.name}</a></h3>
             <div className={styles.cardDescription} dangerouslySetInnerHTML={{__html: short_description_cut}}></div>
             <div className={styles.ctaPriceDiv}>
-              <span>€{cardsData.left.price}</span> <Button target="_blank" href={cardsData.permalink} variant="success" size="sm">Acquista</Button>
+              <span>€{cardsData.left.price}</span> <Button target="_blank" href={cardsData.left.permalink} variant="success" size="sm">Acquista</Button>
             </div>
           </div>
         </div>
@@ -44,10 +44,10 @@ function inEvidenza(props) {
         <div key={"inevid-center"} className={`${styles.cardContainerDesk} col-sm-4`}>
           <div style={{backgroundImage: `url('${cardsData.center.images[0].src}')`}} className={styles.cardContentDiv2}>
             <div className={styles.shadedHalf}>
-              <h3 className={styles.cardTitle}><a target="_blank" href={cardsData.permalink}>{cardsData.center.name}</a></h3>
+              <h3 className={styles.cardTitle}><a target="_blank" href={cardsData.center.permalink}>{cardsData.center.name}</a></h3>
                 <div className={styles.cardDescription} dangerouslySetInnerHTML={{__html: short_description_cut}}></div>
               <div className={styles.ctaPriceDiv}>
-                <span>€{cardsData.center.price}</span> <Button target="_blank" href={cardsData.permalink} variant="success" size="sm">Acquista</Button>
+                <span>€{cardsData.center.price}</span> <Button target="_blank" href={cardsData.center.permalink} variant="success" size="sm">Acquista</Button>
               </div>
             </div>
           </div>
@@ -68,10 +68,10 @@ function inEvidenza(props) {
         <div key={"inevid-right"} className={`${styles.cardContainerDesk} col-sm-4`}>
           <div style={{backgroundImage: `url('${cardsData.right.images[0].src}')`}} className={styles.cardContentDiv3}>
             <div className={`${styles.shadedHalf} ${styles.shadedHalfRight}`}>
-              <h3 className={styles.cardTitle}><a target="_blank" href={cardsData.permalink}>{cardsData.center.name}</a></h3>
+              <h3 className={styles.cardTitle}><a target="_blank" href={cardsData.right.permalink}>{cardsData.center.name}</a></h3>
               <div className={styles.cardDescription} dangerouslySetInnerHTML={{__html: short_description_cut}}></div>
               <div className={styles.ctaPriceDiv}>
-                <span>€{cardsData.right.price}</span> <Button target="_blank" href={cardsData.permalink} variant="success" size="sm">Acquista</Button>
+                <span>€{cardsData.right.price}</span> <Button target="_blank" href={cardsData.right.permalink} variant="success" size="sm">Acquista</Button>
               </div>
             </div>
           </div>
