@@ -38,10 +38,12 @@ function Footer() {
           </Col>
           <Col sm="12" lg="6">
             <div className={styles.socialIconsContainer}>
+              <div>
               <a className={styles.hvrPop} href="#"><Image src="img/twitter-icon.png" /></a>
               <a className={styles.hvrPop} href="#"><Image src="img/facebook-icon.png" /></a>
-            <a className={styles.hvrPop} href="#"><Image src="img/instagram-icon.png" /></a>
-          <a className={styles.hvrPop} href="#"><Image src="img/whatsapp-icon.png" /></a>
+              <a className={styles.hvrPop} href="#"><Image src="img/instagram-icon.png" /></a>
+              <a className={styles.hvrPop} href="#"><Image src="img/whatsapp-icon.png" /></a>
+              </div>
             </div>
           </Col>
         </Row>

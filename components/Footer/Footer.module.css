@@ -67,12 +67,16 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
-  .footerContentContainer img {
-    width: 50px;
+  .socialIconsContainer a img {
+    width: 60px;
     margin-right: 15px;
+  }
+
+  .socialIconsContainer a:last-child img {
+    margin-right: 0px;
   }
 
 }
