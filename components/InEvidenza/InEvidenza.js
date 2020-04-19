@@ -6,21 +6,31 @@ function inEvidenza(props) {
 
   //UTILITY FX for desktop generation of card row
   const placeCardRow = (cardsData) => {
-    // console.log(cardsData, "ASD"); // DEBUG
+    console.log(cardsData, "ASD", `questi sono ${Object.keys(cardsData).length}`); // DEBUG
     let theCardsRowLeft, theCardsRowCenter, theCardsRowRight;
-    const totalContentLen = 165;
+    let styletoApplyShade, styletoApplyCard;
+    const totalContentLen = 140;
+
+    // LEFT card
     let titleLen = cardsData.left.name.length;
     let paragraphLen = cardsData.left.short_description.length;
     let paraAllowedLen = totalContentLen - titleLen
-    // console.log(paraAllowedLen); // DEBUG
+    // console.log(totalContentLen, titleLen, paragraphLen, paraAllowedLen); // DEBUG
     let short_description_cut = cardsData.left.short_description.substring(0, paraAllowedLen);
     if (short_description_cut < cardsData.left.short_description) {
       short_description_cut = short_description_cut + '...'
     }
+    if (Object.keys(cardsData).length === 1) {
+      styletoApplyCard = `${styles.cardContentDiv3}`
+      styletoApplyShade = `${styles.shadedHalf} ${styles.shadedHalfRight}`
+    } else {
+      styletoApplyCard = `${styles.cardContentDiv1}`
+      styletoApplyShade = `${styles.shadedHalf}`
+    }
     theCardsRowLeft = (
       <div key={`inevid-left`} className={`${styles.cardContainerDesk} col-sm-4`}>
-        <div style={{backgroundImage: `url('${cardsData.left.images[0].src}')`}} className={styles.cardContentDiv1}>
-          <div className={styles.shadedHalf}>
+        <div style={{backgroundImage: `url('${cardsData.left.images[0].src}')`}} className={styletoApplyCard}>
+          <div className={styletoApplyShade}>
             <h3 className={styles.cardTitle}><a target="_blank" href={cardsData.left.permalink}>{cardsData.left.name}</a></h3>
             <div className={styles.cardDescription} dangerouslySetInnerHTML={{__html: short_description_cut}}></div>
             <div className={styles.ctaPriceDiv}>
@@ -31,6 +41,7 @@ function inEvidenza(props) {
       </div>
     )
 
+    // CENTER card
     if (cardsData.center) {
       titleLen = cardsData.center.name.length;
       paragraphLen = cardsData.center.short_description.length;
@@ -40,10 +51,17 @@ function inEvidenza(props) {
       if (short_description_cut < cardsData.center.short_description) {
         short_description_cut = short_description_cut + '...'
       }
+      if (Object.keys(cardsData).length === 2) {
+        styletoApplyCard = `${styles.cardContentDiv3}`
+        styletoApplyShade = `${styles.shadedHalf} ${styles.shadedHalfRight}`
+      } else {
+        styletoApplyCard = `${styles.cardContentDiv2}`
+        styletoApplyShade = `${styles.shadedHalf}`
+      }
       theCardsRowCenter = (
         <div key={"inevid-center"} className={`${styles.cardContainerDesk} col-sm-4`}>
-          <div style={{backgroundImage: `url('${cardsData.center.images[0].src}')`}} className={styles.cardContentDiv2}>
-            <div className={styles.shadedHalf}>
+          <div style={{backgroundImage: `url('${cardsData.center.images[0].src}')`}} className={styletoApplyCard}>
+            <div className={styletoApplyShade}>
               <h3 className={styles.cardTitle}><a target="_blank" href={cardsData.center.permalink}>{cardsData.center.name}</a></h3>
                 <div className={styles.cardDescription} dangerouslySetInnerHTML={{__html: short_description_cut}}></div>
               <div className={styles.ctaPriceDiv}>
@@ -55,6 +73,7 @@ function inEvidenza(props) {
       )
     }
 
+    // RIGHT card
     if (cardsData.right) {
       titleLen = cardsData.right.name.length;
       paragraphLen = cardsData.right.short_description.length;
@@ -126,7 +145,7 @@ function inEvidenza(props) {
   // MOBILE CARDS GENERATION
   const generateCardsMobile = () => {
     let generatedCards = props.data.map( (element, index) => {
-      const totalContentLen = 170;
+      const totalContentLen = 140;
       let titleLen = element.name.length;
       let paragraphLen = element.short_description.length;
       let paraAllowedLen = totalContentLen - titleLen
@@ -160,14 +179,14 @@ function inEvidenza(props) {
         <div className={styles.cardDiv}>
 
         {/* MOBILE CAROUSEL */}
-        <Carousel className="d-lg-none d-xl-none" controls={false} indicators={true} interval={3000}>
+        <Carousel className="d-lg-none d-xl-none" controls={false} indicators={true} interval={30000}>
 
         {generateCardsMobile()}
 
         </Carousel>
 
         {/* DESKTOP CAROUSEL */}
-        <Carousel className="d-none d-lg-block d-xl-block" controls={false} indicators={true} interval={3000}>
+        <Carousel className="d-none d-lg-block d-xl-block" controls={false} indicators={true} interval={30000}>
 
           {generateCardsDesktop()}
 
