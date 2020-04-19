@@ -9,6 +9,7 @@
 .cardLinkElem {
   width: 100%;
   text-decoration-color: white !important;
+  padding: 0;
 }
 
 .cardContainer {
