@@ -6,7 +6,7 @@ function Header() {
     <div className={styles.headerContainer}>
     <Navbar className={styles.navBarElemCont} variant="dark" bg="bg-red" expand="lg">
       <Navbar.Brand href="/">
-        <img className={styles.logoNavbar} src="/img/novacharta-logo.svg" />
+        <img className={styles.logoNavbar} src="/img/novacharta-logo.png" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">

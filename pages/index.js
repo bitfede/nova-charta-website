@@ -23,6 +23,7 @@ class HomePage extends React.Component {
   render() {
 
     return (
+      <div className="globalContainer">
       <div className="mainContainer">
         <Header />
         <InEvidenza data={this.props.inEvidenza} />
@@ -30,6 +31,7 @@ class HomePage extends React.Component {
         <RaccolteFondi />
         <StoriaCasa />
         <Footer />
+      </div>
       </div>
   )
   }

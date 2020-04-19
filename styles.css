@@ -8,8 +8,16 @@ body {
   font-family: 'Muli', sans-serif;
 }
 
-.mainContainer {
+.globalContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgrey;
+}
 
+.mainContainer {
+  max-width: 1400px;
+  background: white;
 }
 
 
@@ -31,7 +39,6 @@ body {
 
 #basic-navbar-nav {
   background-color: #f3f3f3;
-  border: 2px solid black;
   padding: 10px;
   border-radius: 10px;
   color: white;
@@ -65,7 +72,7 @@ body {
 /* CAROUSEL IN EVIDENZA COMPONENT */
 
 .carousel-indicators {
-  bottom: -57px;
+  bottom: -40px;
 }
 
 .carousel-indicators li {

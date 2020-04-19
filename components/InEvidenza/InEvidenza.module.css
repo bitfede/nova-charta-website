@@ -1,8 +1,9 @@
 .inEvidenzaContainer {
   z-index: 0;
-  margin-top: 2vh;
+  margin-top: 0;
   margin-left: 5vw;
   margin-right: 5vw;
+  margin-bottom: 4vh;
 }
 
 .mainTitle {
@@ -134,7 +135,7 @@
 @media (min-width: 992px) {
 
   .inEvidenzaContainer {
-    margin-top: 12vh;
+    margin-top: 2vh;
     margin-left: 2vw;
     margin-right: 2vw;
   }

@@ -1,13 +1,15 @@
 .footerContainer {
-  width: 100vw;
+  /* width: 100vw; */
   z-index: 0;
-  margin-top: -5vh;
+  margin-top: 3vh;
   margin-left: 0vw;
   margin-right: 0vw;
   /* height: 670px; */
   background-size: cover;
-  padding-top: 160px;
+  /* padding-top: 6vh; */
   padding-bottom: 30px;
+  background-position: right top;
+  /* background-repeat: round; */
 }
 
 .rowDiv {
@@ -20,7 +22,7 @@
 
 .footerContentContainer {
   margin-left: 3vw;
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 .socialIconsContainer img {
@@ -48,8 +50,12 @@
 @media (min-width: 992px) {
 
   .footerContainer {
-    /* height: 480px; */
-    padding-top: 90px;
+    /* margin-top: -5vh; */
+    /* background-repeat: round; */
+  }
+
+  .footerContentContainer {
+    padding-top: 190px;
   }
 
   .footerContentContainer p {
