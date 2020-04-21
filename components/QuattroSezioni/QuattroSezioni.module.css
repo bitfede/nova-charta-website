@@ -1,6 +1,6 @@
 .quattroSezioniContainer {
   z-index: 0;
-  margin-top: 9vh;
+  margin-top: 7vh;
   margin-left: 10vw;
   margin-right: 10vw;
   margin-bottom: 0;
@@ -59,6 +59,13 @@
   }
   .desktopCard4 {
     border-radius: 0 0 50px 0;
+  }
+}
+
+@media (min-width: 1500px) {
+  .quattroSezioniContainer {
+    margin-left: 5vw;
+    margin-right: 5vw;
   }
 }
 
