@@ -16,17 +16,16 @@ class HomePage extends React.Component {
     const wooApiUrl = `http://${wooUser}:${wooKey}@negozio.novacharta.it/wp-json/wc/v3`
     const res = await fetch(`${wooApiUrl}/products?category=83`) // OR 90 for "ilmeglio" category
     if (res.status !== 200) {
-      return {inEvidenza: {error: 'WP API ha ritornato un errore, contattare supporto tecnico'} }
+      return {inEvidenza: {error: 'WP-JSON API ha ritornato un errore, contattare supporto tecnico'} }
     }
     const json = await res.json()
-
     return { inEvidenza: json }
   }
 
   inserisciAvviso(avviso) {
 
     return (
-      <h6 >avviso: asd</h6>
+      <h6 style={{margin: 0, padding: 5, color: 'white', background: 'red'}}>{avviso}</h6>
     )
   }
 
@@ -35,7 +34,7 @@ class HomePage extends React.Component {
     return (
       <div className="globalContainer">
       <div className="mainContainer">
-        {this.inserisciAvviso("ciao")}
+        {this.inserisciAvviso("Si avvisano i gentili utenti che potranno verificarsi errori ed interruzioni durante la navigazione del sito, causa interventi di manutenzione in corso in questi giorni. Ci scusiamo per il disagio.")}
         <Header />
         <InEvidenza data={this.props.inEvidenza} />
         <QuattroSezioni />
