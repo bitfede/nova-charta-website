@@ -13,6 +13,11 @@ class Pubblicita extends React.Component {
     // console.log("DEBUG [] [] -> ", process.env.WOOCOMMERCE_SECRET_KEY);
     const wooApiUrl = `https://${wooUser}:${wooKey}@novacharta.it/wp-json/wp/v2`
     const res = await fetch(`${wooApiUrl}/pages/6499`)
+
+    if (res.status !== 200) {
+      return {contenutoPagina: {error: 'WP-JSON API ha ritornato un errore, contattare il supporto tecnico'} }
+    }
+
     const json = await res.json()
     return { contenutoPagina: json }
   }
