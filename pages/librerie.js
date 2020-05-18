@@ -21,10 +21,12 @@ class Librerie extends React.Component {
     const { contenutoPagina } = this.props
 
     return (
-      <div className="mainContainer">
-        <Header />
-        <LibrerieAff contenutoPagina={contenutoPagina} />
-        <Footer />
+      <div className="globalContainer">
+        <div className="mainContainer">
+          <Header />
+          <LibrerieAff contenutoPagina={contenutoPagina} />
+          <Footer />
+        </div>
       </div>
   )
   }

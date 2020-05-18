@@ -21,10 +21,12 @@ class Contatti extends React.Component {
     const { contenutoPagina } = this.props
 
     return (
-      <div className="mainContainer">
-        <Header />
-        <ContattiContent contenutoPagina={contenutoPagina} />
-        <Footer />
+      <div className="globalContainer">
+        <div className="mainContainer">
+          <Header />
+          <ContattiContent contenutoPagina={contenutoPagina} />
+          <Footer />
+        </div>
       </div>
     )
   }

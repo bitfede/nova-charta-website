@@ -179,14 +179,14 @@ function inEvidenza(props) {
         <div className={styles.cardDiv}>
 
         {/* MOBILE CAROUSEL */}
-        <Carousel className="d-lg-none d-xl-none" controls={false} indicators={true} interval={30000}>
+        <Carousel className="d-lg-none d-xl-none" controls={false} indicators={true} interval={4000}>
 
         {generateCardsMobile()}
 
         </Carousel>
 
         {/* DESKTOP CAROUSEL */}
-        <Carousel className="d-none d-lg-block d-xl-block" controls={false} indicators={true} interval={30000}>
+        <Carousel className="d-none d-lg-block d-xl-block" controls={false} indicators={true} interval={4000}>
 
           {generateCardsDesktop()}
 

@@ -21,10 +21,12 @@ class Corsi extends React.Component {
     const { contenutoPagina } = this.props
 
     return (
-      <div className="mainContainer">
-        <Header />
-        <CorsiContent contenutoPagina={contenutoPagina} />
-        <Footer />
+      <div className="globalContainer">
+        <div className="mainContainer">
+          <Header />
+          <CorsiContent contenutoPagina={contenutoPagina} />
+          <Footer />
+        </div>
       </div>
     )
   }

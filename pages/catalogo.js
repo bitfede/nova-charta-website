@@ -9,10 +9,12 @@ class Catalogo extends React.Component {
   render() {
 
     return (
+      <div className="globalContainer">
       <div className="mainContainer">
         <Header />
         <CatalogoLista />
         <Footer />
+      </div>
       </div>
   )
   }
