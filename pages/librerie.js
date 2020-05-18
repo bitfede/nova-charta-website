@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import fetch from 'isomorphic-unfetch'
 import Header from '../components/Header/Header'
 import LibrerieAff from '../components/Librerie/Librerie'
@@ -27,6 +28,9 @@ class Librerie extends React.Component {
 
     return (
       <div className="globalContainer">
+        <Head>
+          <title>Nova Charta Editori</title>
+        </Head>
         <div className="mainContainer">
           <Header />
           <LibrerieAff contenutoPagina={contenutoPagina} />

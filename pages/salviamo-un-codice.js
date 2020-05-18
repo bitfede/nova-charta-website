@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import fetch from 'isomorphic-unfetch'
 import Header from '../components/Header/Header'
 import SalviamoCodiceContent from '../components/SalviamoCodice/SalviamoCodice'
@@ -27,6 +28,9 @@ class SalviamoUnCodice extends React.Component {
 
     return (
       <div className="globalContainer">
+        <Head>
+          <title>Nova Charta Editori</title>
+        </Head>
         <div className="mainContainer">
           <Header />
           <SalviamoCodiceContent contenutoPagina={contenutoPagina} />

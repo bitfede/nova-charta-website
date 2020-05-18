@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import fetch from 'isomorphic-unfetch'
 import Header from '../components/Header/Header'
 import InEvidenza from '../components/InEvidenza/InEvidenza'
@@ -34,6 +35,9 @@ class HomePage extends React.Component {
 
     return (
       <div className="globalContainer">
+        <Head>
+          <title>Nova Charta Editori</title>
+        </Head>
       <div className="mainContainer">
         {this.inserisciAvviso("Si avvisano i gentili utenti che potranno verificarsi errori ed interruzioni durante la navigazione del sito, causa interventi di manutenzione in corso in questi giorni. Ci scusiamo per il disagio.")}
         <Header />
