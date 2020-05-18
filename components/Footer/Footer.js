@@ -39,10 +39,10 @@ function Footer() {
           <Col sm="12" lg="6">
             <div className={styles.socialIconsContainer}>
               <div>
-                <a className={styles.hvrPop} href="#"><Image src="img/twitter-icon.png" /></a>
-                <a className={styles.hvrPop} href="#"><Image src="img/facebook-icon.png" /></a>
-                <a className={styles.hvrPop} href="#"><Image src="img/instagram-icon.png" /></a>
-                <a className={styles.hvrPop} href="#"><Image src="img/whatsapp-icon.png" /></a>
+                <a className={styles.hvrPop} target="_blank" href="https://twitter.com/novacharta"><Image src="img/twitter-icon.png" /></a>
+                <a className={styles.hvrPop} target="_blank" href="https://www.facebook.com/NovaCharta"><Image src="img/facebook-icon.png" /></a>
+                <a className={styles.hvrPop} target="_blank" href="https://www.instagram.com/novachartaeditore"><Image src="img/instagram-icon.png" /></a>
+                <a className={styles.hvrPop} target="_blank" href="tel:+39049657574"><Image src="img/whatsapp-icon.png" /></a>
               </div>
             </div>
           </Col>
