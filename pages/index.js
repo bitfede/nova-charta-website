@@ -10,10 +10,11 @@ import Footer from '../components/Footer/Footer'
 class HomePage extends React.Component {
   static async getInitialProps(ctx) {
     // Gets InEvidenza products from WooCommerce backend
+    const rootDomain = "negozio.novacharta.it"
     const wooUser = "ck_b16c75b78dd550537bb2b1f0645d08f5b0bd4067"
     const wooKey = process.env.WOOCOMMERCE_SECRET_KEY
     // console.log("DEBUG [] [] -> ", process.env.WOOCOMMERCE_SECRET_KEY);
-    const wooApiUrl = `http://${wooUser}:${wooKey}@negozio.novacharta.it/wp-json/wc/v3`
+    const wooApiUrl = `http://${wooUser}:${wooKey}@${rootDomain}/wp-json/wc/v3`
     const res = await fetch(`${wooApiUrl}/products?category=83`) // OR 90 for "ilmeglio" category
     if (res.status !== 200) {
       return {inEvidenza: {error: 'WP-JSON API ha ritornato un errore, contattare supporto tecnico'} }

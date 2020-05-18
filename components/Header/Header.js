@@ -11,7 +11,7 @@ function Header() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className={styles.navLinkContainer}>
-          <Nav.Link className={`${styles.midNavLink}`} href="https://novacharta.it" target="_blank"><span className={styles.hvrUnderlineFromCenter}>Catalogo</span></Nav.Link>
+          <Nav.Link className={`${styles.midNavLink}`} href="https://negozio.novacharta.it" target="_blank"><span className={styles.hvrUnderlineFromCenter}>Catalogo</span></Nav.Link>
           <Nav.Link className={`${styles.midNavLink}`} href="/librerie#librerie"><span className={styles.hvrUnderlineFromCenter}>Librerie</span></Nav.Link>
           <Nav.Link className={`${styles.midNavLink}`} href="/corsi#corsi"><span className={styles.hvrUnderlineFromCenter}>I nostri Corsi</span></Nav.Link>
           <Nav.Link className={`${styles.midNavLink}`} href="/pubblicita"><span className={styles.hvrUnderlineFromCenter}>Pubblicità</span></Nav.Link>
