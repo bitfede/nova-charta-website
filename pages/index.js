@@ -13,11 +13,21 @@ class HomePage extends React.Component {
     const wooUser = "ck_b16c75b78dd550537bb2b1f0645d08f5b0bd4067"
     const wooKey = process.env.WOOCOMMERCE_SECRET_KEY
     // console.log("DEBUG [] [] -> ", process.env.WOOCOMMERCE_SECRET_KEY);
-    const wooApiUrl = `https://${wooUser}:${wooKey}@novacharta.it/wp-json/wc/v3`
+    const wooApiUrl = `http://${wooUser}:${wooKey}@negozio.novacharta.it/wp-json/wc/v3`
     const res = await fetch(`${wooApiUrl}/products?category=83`) // OR 90 for "ilmeglio" category
+    if (res.status !== 200) {
+      return {inEvidenza: {error: 'WP API ha ritornato un errore, contattare supporto tecnico'} }
+    }
     const json = await res.json()
-    //TODO add the shop url 'negozio.novacharta.it' as a global prop?
+
     return { inEvidenza: json }
+  }
+
+  inserisciAvviso(avviso) {
+
+    return (
+      <h6 >avviso: asd</h6>
+    )
   }
 
   render() {
@@ -25,6 +35,7 @@ class HomePage extends React.Component {
     return (
       <div className="globalContainer">
       <div className="mainContainer">
+        {this.inserisciAvviso("ciao")}
         <Header />
         <InEvidenza data={this.props.inEvidenza} />
         <QuattroSezioni />

@@ -103,6 +103,9 @@ function inEvidenza(props) {
 
   // DESKTOP CARDS GENERATION
   const generateCardsDesktop = () => {
+    if (props.data.error) {
+      return
+    }
     const rawData = props.data
     let organizedData = []
     let triad = {}
@@ -144,6 +147,9 @@ function inEvidenza(props) {
 
   // MOBILE CARDS GENERATION
   const generateCardsMobile = () => {
+    if (props.data.error) {
+      return
+    }
     let generatedCards = props.data.map( (element, index) => {
       const totalContentLen = 140;
       let titleLen = element.name.length;
@@ -168,12 +174,21 @@ function inEvidenza(props) {
       )
     })
     return generatedCards
-    }
+  }
+
+
+  let mainTitleElem
+
+  if (props.data.error) {
+    mainTitleElem = ("")
+  } else {
+    mainTitleElem = (<h1 className={styles.mainTitle}>In evidenza</h1>)
+  }
 
   return (
     <div className={styles.inEvidenzaContainer}>
       <div className={styles.titlesContainer}>
-        <h1 className={styles.mainTitle}>In evidenza</h1>
+        {mainTitleElem}
       </div>
       <div className={styles.cardsContainer}>
         <div className={styles.cardDiv}>
