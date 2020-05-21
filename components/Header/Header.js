@@ -13,6 +13,7 @@ function Header() {
         <Nav className={styles.navLinkContainer}>
           <Nav.Link className={`${styles.midNavLink}`} href="https://negozio.novacharta.it" target="_blank"><span className={styles.hvrUnderlineFromCenter}>Catalogo</span></Nav.Link>
           <Nav.Link className={`${styles.midNavLink}`} href="/librerie#librerie"><span className={styles.hvrUnderlineFromCenter}>Librerie</span></Nav.Link>
+          <Nav.Link className={`${styles.midNavLink}`} href="/librerie#librerie"><span className={styles.hvrUnderlineFromCenter}>Diario</span></Nav.Link>
           <Nav.Link className={`${styles.midNavLink}`} href="/corsi#corsi"><span className={styles.hvrUnderlineFromCenter}>I nostri Corsi</span></Nav.Link>
           <Nav.Link className={`${styles.midNavLink}`} href="/pubblicita"><span className={styles.hvrUnderlineFromCenter}>Pubblicità</span></Nav.Link>
           <Nav.Link className={`${styles.midNavLink}`} href="/raccolta-fondi"><span className={styles.hvrUnderlineFromCenter}>Raccolta Fondi</span></Nav.Link>

@@ -15,8 +15,11 @@ class HomePage extends React.Component {
     const wooUser = "ck_b16c75b78dd550537bb2b1f0645d08f5b0bd4067"
     const wooKey = process.env.WOOCOMMERCE_SECRET_KEY
     // console.log("DEBUG [] [] -> ", process.env.WOOCOMMERCE_SECRET_KEY);
-    const wooApiUrl = `http://${wooUser}:${wooKey}@${rootDomain}/wp-json/wc/v3`
+    const wooApiUrl = `https://${wooUser}:${wooKey}@${rootDomain}/wp-json/wc/v3`
     const res = await fetch(`${wooApiUrl}/products?category=83`) // OR 90 for "ilmeglio" category
+    console.log(res);
+    console.log("------")
+    console.log(res.status);
     if (res.status !== 200) {
       return {inEvidenza: {error: 'WP-JSON API ha ritornato un errore, contattare supporto tecnico'} }
     }
@@ -39,7 +42,7 @@ class HomePage extends React.Component {
           <title>Nova Charta Editori</title>
         </Head>
       <div className="mainContainer">
-        {this.inserisciAvviso("Si avvisano i gentili utenti che potranno verificarsi errori ed interruzioni durante la navigazione del sito, causa interventi di manutenzione in corso in questi giorni. Ci scusiamo per il disagio.")}
+        {/* this.inserisciAvviso("Si avvisano i gentili utenti che potranno verificarsi errori ed interruzioni durante la navigazione del sito, causa interventi di manutenzione in corso in questi giorni. Ci scusiamo per il disagio.") */}
         <Header />
         <InEvidenza data={this.props.inEvidenza} />
         <QuattroSezioni />
