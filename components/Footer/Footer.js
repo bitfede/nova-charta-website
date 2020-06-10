@@ -23,18 +23,33 @@ function Footer() {
           </Col>
           <Col sm="6" lg="3">
             <h1>Newsletter</h1>
-            <Form className={styles.newsletterForm}>
-              <Form.Group controlId="formBasicEmail">
-                <Form.Label>Indirizzo Email</Form.Label>
-                <div className={styles.formAndBtn}>
-                <Form.Control type="email" placeholder="Inserisci qui la tua email" />
-                <Button variant="primary" type="submit">Iscriviti</Button>
-                </div>
-                <Form.Text className="text-muted">
-                  I dati saranno trattati seguendo il GDPR
-                </Form.Text>
-              </Form.Group>
-            </Form>
+            <form method="post">
+              <p><label>Indirizzo E-M@il: </label>
+              <input type="email" name="EMAIL" placeholder="Il tuo indirizzo E-M@il" required="" /></p>
+              <p><input type="submit" value="Iscriviti" /></p>
+              <div style={{display: "none"}}>
+              <input type="text" name="_mc4wp_ho_58b515cfbcfb6d6c8027b2921b8bf2c2" value="" tabindex="-1" autocomplete="off" />
+            </div>
+              <input type="hidden" name="_mc4wp_timestamp" value="1590437296" />
+              <input type="hidden" name="_mc4wp_form_id" value="0" />
+              <input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" />
+              <input type="hidden" name="_mc4wp_form_submit" value="1" />
+              <input type="hidden" name="_mc4wp_form_nonce" value="8a57930ebf" />
+            </form>
+            {/*  ----- old form ----
+              <Form className={styles.newsletterForm}>
+                <Form.Group controlId="formBasicEmail">
+                  <Form.Label>Indirizzo Email</Form.Label>
+                  <div className={styles.formAndBtn}>
+                  <Form.Control type="email" placeholder="Inserisci qui la tua email" />
+                  <Button variant="primary" type="submit">Iscriviti</Button>
+                  </div>
+                  <Form.Text className="text-muted">
+                    I dati saranno trattati seguendo il GDPR
+                  </Form.Text>
+                </Form.Group>
+              </Form>
+            */}
           </Col>
           <Col sm="12" lg="6">
             <div className={styles.socialIconsContainer}>

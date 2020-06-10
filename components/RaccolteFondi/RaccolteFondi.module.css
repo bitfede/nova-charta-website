@@ -40,6 +40,9 @@
   color: white;
 }
 
+.ctaButton a {
+  color: white !important;
+}
 
 /*
   DESKTOP STYLES

@@ -87,7 +87,7 @@ function inEvidenza(props) {
         <div key={"inevid-right"} className={`${styles.cardContainerDesk} col-sm-4`}>
           <div style={{backgroundImage: `url('${cardsData.right.images[0].src}')`}} className={styles.cardContentDiv3}>
             <div className={`${styles.shadedHalf} ${styles.shadedHalfRight}`}>
-              <h3 className={styles.cardTitle}><a target="_blank" href={cardsData.right.permalink}>{cardsData.center.name}</a></h3>
+              <h3 className={styles.cardTitle}><a target="_blank" href={cardsData.right.permalink}>{cardsData.right.name}</a></h3>
               <div className={styles.cardDescription} dangerouslySetInnerHTML={{__html: short_description_cut}}></div>
               <div className={styles.ctaPriceDiv}>
                 <span>€{cardsData.right.price}</span> <Button target="_blank" href={cardsData.right.permalink} variant="success" size="sm">Acquista</Button>
